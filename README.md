@@ -1,3 +1,5 @@
+[![](https://img.shields.io/badge/umler--viewer-v0.1.0-green)](https://github.com/krossovochkin/umler.kt/releases/tag/v0.1.0) [![](https://img.shields.io/badge/umler--scanner-v0.1.0-blue)](https://bintray.com/krossovochkin/umler.kt/umler-scanner)
+
 # umler.kt
 UML generator for Kotlin projects
 
