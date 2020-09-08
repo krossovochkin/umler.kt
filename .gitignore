@@ -24,6 +24,7 @@ hs_err_pid*
 
 .idea/
 .gradle/
-**/build/
 
 umler.json
+**/build/
+.gradle/
