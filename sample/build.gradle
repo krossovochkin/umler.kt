@@ -11,7 +11,7 @@ repositories {
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
 
-    detektPlugins project(":umler-scanner")
+    detektPlugins "com.krossovochkin.detekt:umler-scanner:0.1.1"
 }
 
 detekt {

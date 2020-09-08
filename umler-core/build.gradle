@@ -1,5 +1,6 @@
 plugins {
     id 'org.jetbrains.kotlin.jvm'
+    id 'maven-publish'
 }
 
 repositories {
@@ -8,4 +9,23 @@ repositories {
 
 dependencies {
     implementation 'com.google.code.gson:gson:2.8.6'
+}
+
+task sourceJar(type: Jar) {
+    classifier 'sources'
+    from sourceSets.main.allJava
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId = 'com.krossovochkin.detekt'
+            artifactId = 'umler-core'
+            version = '0.1.0'
+
+            artifact tasks.sourceJar
+
+            from components.java
+        }
+    }
 }
