@@ -1,0 +1,6 @@
+include ':sample'
+include ':umler-scanner'
+include ':umler'
+include ':umler-core'
+
+rootProject.name = 'umler'

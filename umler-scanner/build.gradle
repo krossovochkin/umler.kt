@@ -1,0 +1,32 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm'
+    id 'maven-publish'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "io.gitlab.arturbosch.detekt:detekt-api:1.12.0"
+    implementation project(":umler-core")
+}
+
+task sourceJar(type: Jar) {
+    classifier 'sources'
+    from sourceSets.main.allJava
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId = 'com.krossovochkin.detekt'
+            artifactId = 'umler-scanner'
+            version = '0.1.0'
+
+            artifact tasks.sourceJar
+
+            from components.java
+        }
+    }
+}

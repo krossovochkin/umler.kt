@@ -1,0 +1,31 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm'
+    id "io.gitlab.arturbosch.detekt" version "1.12.0"
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+
+    detektPlugins project(":umler-scanner")
+}
+
+detekt {
+    failFast = true
+    config = files("$projectDir/quality/detekt.yml")
+
+    buildUponDefaultConfig = false
+    disableDefaultRuleSets = true
+
+    reports {
+        html.enabled = false
+        xml.enabled = false
+        txt.enabled = false
+    }
+}
+
+tasks.detekt.jvmTarget = "1.8"
