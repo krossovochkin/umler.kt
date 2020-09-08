@@ -50,6 +50,8 @@ java -jar umler.jar
 Then in the file chooser select 'umler.json' file generated in the previous step (located in the project dir).
 Viewer allows moving elements for better visualization.
 
+![](https://github.com/krossovochkin/umler.kt/blob/v0.1.1/image/umler-viewer.png)
+
 # Supported elements
 
 Elements are shown as a rectangles.  
